@@ -36,7 +36,7 @@ Query OK, 0 rows affected (0.05 sec)
   ```
   mysql> show tables;
 
-  
+
 | Tables_in_students |
 |:------------------:|
 | class_info         |
@@ -44,5 +44,30 @@ Query OK, 0 rows affected (0.05 sec)
 
 
 2 rows in set (0.00 sec)
+
+## Feature 1 :
+ * Student Registration
+
+
+
+> mysql> INSERT INTO students (id,name,email,mobile_no,password,gender,dob)
+>
+>  -> VALUES ('9','tonytony','tony@gmail.com','2000','onepiece','M','2008-02-08'),
+>
+>  ->    ('10','gajeel','gajeel@gmail.com','9000','fairy tail','M','2014-02-03'),
+>
+>  ->        ('11','yagami','yagami@gmail.com','1000','deathnote','M','2019-02-16');
+>
+> Query OK, 3 rows affected (0.02 sec)
+
+
+## Feature 2 :
+ * List all students
+
+> mysql> SELECT * FROM students;
+
+
+
+
 
 
