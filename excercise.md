@@ -241,6 +241,8 @@ mysql> SELECT students.name,class_info.class FROM students INNER JOIN class_info
 
 Student named sengoku has withdrawn from classs
 
+PENDING
+
 
 ## Feature 9 :
  * Find student details who have not updated their Date Of Birth 
@@ -361,8 +363,81 @@ mysql> SELECT students.name,class_info.class FROM students INNER JOIN class_info
 
 15 rows in set (0.00 sec)
 
+> Full details
+
+```
+mysql> SELECT * FROM students INNER JOIN class_info ON students.id = class_info.id;
+
+```
+
+| id | name     | email               | mobile_no | password    | gender | dob        | created_date        | id | student_id | class | status   |
+|:---:|:----------:|:---------------------:|:----------:|:------------:|:-------:|:------------:|:---------------------:|:---:|:----------:|:------:|:--------:|
+|  1 | hinata   | hinata@mail.com     |     11000 | haikyuu     | M      | 2000-11-12 | 2022-03-03 11:58:18 |  1 |          1 |    10 | ACTIVE   |
+|  2 | luffy    | monkey@mail.com     |     12000 | onepiece    | M      | 1999-05-15 | 2022-03-03 12:06:58 |  2 |          2 |     9 | INACTIVE |
+|  3 | zoro     | zoro@gmail.com      |     11000 | onepiece    | M      | 1999-03-08 | 2022-03-03 14:40:53 |  3 |          3 |    11 | ACTIVE   |
+|  4 | sanji    | sanji@gmail.com     |     10000 | onepiece    | M      | 1999-07-18 | 2022-03-03 14:40:53 |  4 |          4 |     8 | ACTIVE   |
+|  5 | hinata   | hinatachan@mail.com |      3000 | naruto      | F      | 1997-12-30 | 2022-03-03 12:22:23 |  5 |          5 |     6 | ACTIVE   |
+|  6 | naruto   | naruto@mail.com     |     15000 | naruto      | M      | 1997-01-12 | 2022-03-03 12:22:23 |  6 |          6 |     6 | ACTIVE   |
+|  7 | natsu    | natsu@gmail.com     |     13000 | fairy tail  | M      | 2006-07-11 | 2022-03-03 14:23:06 |  7 |          7 |     6 | INACTIVE |
+|  8 | nami     | nami@gmail.com      |      6000 | onepiece    | M      | 1999-07-18 | 2022-03-03 14:40:53 |  8 |          8 |     4 | ACTIVE   |
+|  9 | tonytony | tony@gmail.com      |      2000 | onepiece    | M      | 2008-02-08 | 2022-03-03 14:47:09 |  9 |          9 |     6 | ACTIVE   |
+| 10 | gajeel   | gajeel@gmail.com    |      9000 | fairy tail  | M      | 2014-02-03 | 2022-03-03 14:47:09 | 10 |         10 |    10 | ACTIVE   |
+| 11 | yagami   | yagami@gmail.com    |      1000 | deathnote   | M      | 2019-02-16 | 2022-03-03 14:47:09 | 11 |         11 |     1 | ACTIVE   |
+| 12 | killua   | killua@gmail.com    |      1200 | hunter      | M      | 2005-10-24 | 2022-03-03 14:31:04 | 12 |         12 |    12 | INACTIVE |
+| 13 | gon      | gon@gmail.com       |      1100 | hunter      | M      | 2005-12-14 | 2022-03-03 14:31:04 | 13 |         13 |     7 | ACTIVE   |
+| 14 | kamichan | kami@gmail.com      |       100 | kami        | M      | 2012-08-14 | 2022-03-03 14:31:04 | 14 |         14 |     2 | ACTIVE   |
+| 15 | sengoku  | sengoku@gmail.com   |      3100 | demonslayer | M      | 2021-06-14 | 2022-03-03 14:31:04 | 15 |         15 |    12 | ACTIVE   |
+
+
+15 rows in set (0.00 sec)
+
 ## Feature 14 :
  * Display Student Details for the given input class
+  
+   * Class : 5th Standard Using Joins
+
+```
+mysql> SELECT * FROM students
+ INNER JOIN class_info 
+ ON students.id = class_info.id 
+ WHERE class_info.class = 5;
+
+Empty set (0.02 sec)
+
+```
+
+```
+mysql> SELECT * FROM students INNER JOIN class_info ON students.id = class_info.id WHERE class_info.class = 5;
+
+```
+
+| id | name | email          | mobile_no | password | gender | dob        | created_date        | id | student_id | class | status |
+|:----:|:------:|:---------------:|:---------:|:---------:|:--------:|:-----------:|:--------------------:|:---:|:------------:|:-------:|:------:|
+|  8 | nami | nami@gmail.com |      6000 | onepiece | M      | 1999-07-18 | 2022-03-03 14:40:53 |  8 |          8 |     5 | ACTIVE |
+
+
+1 row in set (0.00 sec)
+
+# PENDING
+
+## Feature 8 : 
+ * Student withdrawn from  a Class
+
+## Feature 15 : 
+  * Find Class for the given student email id 
+
+
+## Feature 16 :
+ * Find Students who has not enrolled in a class
+
+
+
+
+
+
+
+
+
 
 
 
