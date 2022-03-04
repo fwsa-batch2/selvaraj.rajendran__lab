@@ -340,8 +340,9 @@ mysql> SELECT students.name,class_info.class FROM students INNER JOIN class_info
 
 ```
 
-|  name    | class |
-|:------- :|:-----:|
+
+| name     | class |
+|:--------:|:------:|
 | hinata   |    10 |
 | luffy    |     9 |
 | zoro     |    11 |
@@ -358,8 +359,11 @@ mysql> SELECT students.name,class_info.class FROM students INNER JOIN class_info
 | kamichan |     2 |
 | sengoku  |    12 |
 
-
 15 rows in set (0.00 sec)
+
+## Feature 14 :
+ * Display Student Details for the given input class
+
 
 
 
