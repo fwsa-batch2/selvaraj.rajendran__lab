@@ -62,5 +62,15 @@ mysql> SHOW DATABASES;
 mysql> use students
 Database changed
 ```
+## TABLE
 
+* **To create a table**
 
+>**syntax**
+>
+>CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+); 
