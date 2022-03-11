@@ -464,6 +464,19 @@ mysql> select students.name,students.email,class_info.class from students inner 
 ## Feature 16 :
  * Find Students who has not enrolled in a class
 
+```
+mysql> select * from students left join class_info on students.id = class_info.id where class is null;
++----+---------+-------------------+-----------+-------------+--------+------------+---------------------+------+------------+-------+--------+
+| id | name    | email             | mobile_no | password    | gender | dob        | created_date        | id   | student_id | class | status |
++----+---------+-------------------+-----------+-------------+--------+------------+---------------------+------+------------+-------+--------+
+| 15 | sengoku | sengoku@gmail.com |      3100 | demonslayer | M      | 2021-06-14 | 2022-03-03 14:31:04 | NULL |       NULL |  NULL | NULL   |
++----+---------+-------------------+-----------+-------------+--------+------------+---------------------+------+------------+-------+--------+
+1 row in set (0.00 sec)
+
+
+```
+
+
 
 
 
