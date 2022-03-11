@@ -451,6 +451,9 @@ mysql> SELECT * FROM students INNER JOIN class_info ON students.id = class_info.
 
 ```
 mysql> select students.name,students.email,class_info.class from students inner join class_info on students.id = class_info.id where email = 'hinata@mail.com';
+
+```
+```
 +--------+-----------------+-------+
 | name   | email           | class |
 +--------+-----------------+-------+
@@ -466,6 +469,10 @@ mysql> select students.name,students.email,class_info.class from students inner 
 
 ```
 mysql> select * from students left join class_info on students.id = class_info.id where class is null;
+
+```
+
+```
 +----+---------+-------------------+-----------+-------------+--------+------------+---------------------+------+------------+-------+--------+
 | id | name    | email             | mobile_no | password    | gender | dob        | created_date        | id   | student_id | class | status |
 +----+---------+-------------------+-----------+-------------+--------+------------+---------------------+------+------------+-------+--------+
