@@ -240,8 +240,35 @@ mysql> SELECT students.name,class_info.class FROM students INNER JOIN class_info
 2 rows in set (0.00 sec)
 
 Student named sengoku has withdrawn from classs
+ 
+ ```
+ mysql> delete from  class_info where id = 15;
+Query OK, 1 row affected (0.02 sec)
 
-PENDING
+ ```
+ ```mysql> select * from class_info;
++----+------------+-------+----------+
+| id | student_id | class | status   |
++----+------------+-------+----------+
+|  1 |          1 |    10 | ACTIVE   |
+|  2 |          2 |     9 | INACTIVE |
+|  3 |          3 |    11 | ACTIVE   |
+|  4 |          4 |     8 | ACTIVE   |
+|  5 |          5 |     6 | ACTIVE   |
+|  6 |          6 |     6 | ACTIVE   |
+|  7 |          7 |     6 | INACTIVE |
+|  8 |          8 |     5 | ACTIVE   |
+|  9 |          9 |     6 | ACTIVE   |
+| 10 |         10 |    10 | ACTIVE   |
+| 11 |         11 |     1 | ACTIVE   |
+| 12 |         12 |    12 | INACTIVE |
+| 13 |         13 |     7 | ACTIVE   |
+| 14 |         14 |     2 | ACTIVE   |
++----+------------+-------+----------+
+14 rows in set (0.00 sec)
+
+
+ ```
 
 
 ## Feature 9 :
@@ -418,13 +445,20 @@ mysql> SELECT * FROM students INNER JOIN class_info ON students.id = class_info.
 
 1 row in set (0.00 sec)
 
-# PENDING
-
-## Feature 8 : 
- * Student withdrawn from  a Class
 
 ## Feature 15 : 
   * Find Class for the given student email id 
+
+```
+mysql> select students.name,students.email,class_info.class from students inner join class_info on students.id = class_info.id where email = 'hinata@mail.com';
++--------+-----------------+-------+
+| name   | email           | class |
++--------+-----------------+-------+
+| hinata | hinata@mail.com |    10 |
++--------+-----------------+-------+
+1 row in set (0.00 sec)
+
+```
 
 
 ## Feature 16 :

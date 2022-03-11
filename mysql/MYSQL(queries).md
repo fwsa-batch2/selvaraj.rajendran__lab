@@ -23,6 +23,30 @@ mysql> SHOW DATABASES;
 5 rows in set (0.00 sec)
 
 ```
+**OR** 
+>**Syntax**
+ >
+  >SHOW SCHEMAS;
+
+  ```
+  mysql> show schemas;
++--------------------+
+| Database           |
++--------------------+
+| FWSA               |
+| academy            |
+| information_schema |
+| mysql              |
+| performance_schema |
+| students           |
+| sys                |
++--------------------+
+7 rows in set (0.00 sec)
+
+
+  ```
+
+
 
 ***
   * **To create a database**
