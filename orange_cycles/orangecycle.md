@@ -312,3 +312,27 @@ mysql> select * from products_details;
 |  4 |          4 | BSA CHAMP       | https/:orangecycles/gallery/cycle/BSA/champ       | hunder is an all-consuming force that no one around can ignore. It is all about power, energy and empowerment that the rider experiences while riding this single speed, no-fuss ATB. |
 
 4 rows in set (0.02 sec)
+
+
+## TABLE 6  ORDERS
+ 
+### creating table "orders"
+
+```
+mysql> create table orders (id int primary key auto_increment,user_id int not null,product_id int not null,price_id int not null,quatntity int not null default '1',total bigint default '0');
+Query OK, 0 rows affected (0.02 sec)
+
+```
+> mysql> desc orders;
+
+
+| Field      | Type   | Null | Key | Default | Extra          |
+|:-----------|:-------|:-----|:----|:--------|:---------------|
+| id         | int    | NO   | PRI | NULL    | auto_increment |
+| user_id    | int    | NO   |     | NULL    |                |
+| product_id | int    | NO   |     | NULL    |                |
+| price_id   | int    | NO   |     | NULL    |                |
+| quatntity  | int    | NO   |     | 1       |                |
+| total      | bigint | YES  |     | 0       |                |
+
+6 rows in set (0.01 sec)
