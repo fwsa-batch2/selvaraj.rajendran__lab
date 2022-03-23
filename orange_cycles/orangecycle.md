@@ -323,16 +323,60 @@ mysql> create table orders (id int primary key auto_increment,user_id int not nu
 Query OK, 0 rows affected (0.02 sec)
 
 ```
+> adding foreig key
+
+```
+mysql> ALTER TABLE orders ADD FOREIGN KEY (user_id) references users(id);
+Query OK, 0 rows affected (0.09 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE orders ADD FOREIGN KEY (product_id) references products(id);
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+mysql> ALTER TABLE orders ADD FOREIGN KEY (price_id) references products_price(id);
+Query OK, 0 rows affected (0.07 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+```
+
 > mysql> desc orders;
 
 
 | Field      | Type   | Null | Key | Default | Extra          |
 |:-----------|:-------|:-----|:----|:--------|:---------------|
 | id         | int    | NO   | PRI | NULL    | auto_increment |
-| user_id    | int    | NO   |     | NULL    |                |
-| product_id | int    | NO   |     | NULL    |                |
-| price_id   | int    | NO   |     | NULL    |                |
+| user_id    | int    | NO   | MUL | NULL    |                |
+| product_id | int    | NO   | MUL | NULL    |                |
+| price_id   | int    | NO   | MUL | NULL    |                |
 | quatntity  | int    | NO   |     | 1       |                |
 | total      | bigint | YES  |     | 0       |                |
 
 6 rows in set (0.01 sec)
+
+
+
+## TABLE 7  review
+
+### creating "review" table
+
+```
+mysql> create table review (id int primary key auto_increment,user_id int not null,product_id int not null,date timestamp default current_timestamp,review_text text(500),stars char(5), foreign key (user_id) references users(id),foreign key (product_id) references products(id) );
+Query OK, 0 rows affected (0.05 sec)
+
+```
+
+> desc review;
+
+
+
+| Field       | Type      | Null | Key | Default           | Extra             |
+|:------------|:----------|:-----|:----|:------------------|:------------------|
+| id          | int       | NO   | PRI | NULL              | auto_increment    |
+| user_id     | int       | NO   | MUL | NULL              |                   |
+| product_id  | int       | NO   | MUL | NULL              |                   |
+| date        | timestamp | YES  |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
+| review_text | text      | YES  |     | NULL              |                   |
+| stars       | char(5)   | YES  |     | NULL              |                   |
+
+6 rows in set (0.00 sec)
