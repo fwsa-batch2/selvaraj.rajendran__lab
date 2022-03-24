@@ -300,8 +300,6 @@ Query OK, 1 row affected (0.02 sec)
 
 ```
 
-> desc products_details;
-
 mysql> select * from products_details;
 
 | id | product_id | name            | image_url                                         | discription                                                                                                                                                                           |
@@ -338,22 +336,50 @@ mysql> ALTER TABLE orders ADD FOREIGN KEY (price_id) references products_price(i
 Query OK, 0 rows affected (0.07 sec)
 Records: 0  Duplicates: 0  Warnings: 0
 
+mysql> alter table orders add column order_date timestamp default current_timestamp;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
 ```
 
 > mysql> desc orders;
 
+| Field      | Type      | Null | Key | Default           | Extra             |
+|:-----------|:----------|:-----|:----|:------------------|:------------------|
+| id         | int       | NO   | PRI | NULL              | auto_increment    |
+| user_id    | int       | NO   | MUL | NULL              |                   |
+| product_id | int       | NO   | MUL | NULL              |                   |
+| price_id   | int       | NO   | MUL | NULL              |                   |
+| quatntity  | int       | NO   |     | 1                 |                   |
+| total      | bigint    | YES  |     | 0                 |                   |
+| order_date | timestamp | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED |
 
-| Field      | Type   | Null | Key | Default | Extra          |
-|:-----------|:-------|:-----|:----|:--------|:---------------|
-| id         | int    | NO   | PRI | NULL    | auto_increment |
-| user_id    | int    | NO   | MUL | NULL    |                |
-| product_id | int    | NO   | MUL | NULL    |                |
-| price_id   | int    | NO   | MUL | NULL    |                |
-| quatntity  | int    | NO   |     | 1       |                |
-| total      | bigint | YES  |     | 0       |                |
 
 6 rows in set (0.01 sec)
 
+### inserting data into orders
+
+```
+mysql> insert into orders values(1,4,1,1,'1','19999',now());
+Query OK, 1 row affected (0.02 sec)
+
+ysql> insert into orders values(2,5,4,4,'1','6999',now());
+Query OK, 1 row affected (0.02 sec)
+
+```
+
+### fetching data from orders
+
+```
+mysql> select * from orders;
++----+---------+------------+----------+-----------+-------+---------------------+
+| id | user_id | product_id | price_id | quatntity | total | order_date          |
++----+---------+------------+----------+-----------+-------+---------------------+
+|  1 |       4 |          1 |        1 |         1 | 19999 | 2022-03-24 09:38:47 |
+|  2 |       5 |          4 |        4 |         1 |  6999 | 2022-03-24 11:37:50 |
++----+---------+------------+----------+-----------+-------+---------------------+
+2 rows in set (0.01 sec)
+
+```
 
 
 ## TABLE 7  review
@@ -380,3 +406,9 @@ Query OK, 0 rows affected (0.05 sec)
 | stars       | char(5)   | YES  |     | NULL              |                   |
 
 6 rows in set (0.00 sec)
+
+### inserting data into review
+
+```
+
+```
