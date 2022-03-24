@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>calculator</title>
+    <script src="calci.js">  </script>
+<style>
+
+body{
+  margin:0;
+  left:0;
+}
+.cal{
+  margin-top:200px;
+}
+table{
+  border:2px black solid;
+}
+.button{
+  height:30px;
+  width:30px;
+  margin:3px;
+  border:2px black  solid;
+  color:white;
+  background:black;
+}
+.button1{
+  height:30px;
+  width:30px;
+  margin:3px;
+  border:2px black  solid;
+  color:white;
+  background:black;
+}
+.button:hover,
+.button1:hover{
+  color:black;
+  background:orange;
+  transform:  translatey(-5px);
+}
+input{
+  width:158px;
+  height:30px;
+  border:2px black  solid;
+  background:;
+}
+</style>
+  </head>
+  <body><center>
+<div class="cal">
+    <table>
+     <input class="viewbox" type="text" id="result" placeholder="0" maxlength="10">
+
+
+  <tr>
+    <td><button type="button" class="button"  onclick="insert('1')">1</button></td>
+      <td><button type="button" class="button"   onclick="insert('2')">2</button></td>
+        <td><button type="button" class="button"   onclick="insert('3')">3</button></td>
+          <td><button type="button" class="button1"   onclick="insert('*')">X</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" class="button"  onclick="insert('4')">4</button></td>
+      <td><button type="button" class="button"   onclick="insert('5')">5</button></td>
+        <td><button type="button" class="button"   onclick="insert('6')">6</button></td>
+          <td><button type="button" class="button1"  onclick="insert('/')">/</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" class="button"   onclick="insert('7')">7</button></td>
+      <td><button type="button" class="button"   onclick="insert('8')">8</button></td>
+        <td><button type="button" class="button"   onclick="insert('9')">9</button></td>
+          <td><button type="button" class="button1"  onclick="insert('+')">+</button></td>
+  </tr>
+  <tr>
+    <td><button type="button" class="button"  value="c"  onclick="clr()">c</button></td>
+      <td><button type="button" class="button"  value="1" onclick="insert('0')">0</button></td>
+        <td><button type="button" class="button1" value="1" onclick="solution()" >=</button></td>
+          <td><button type="button" class="button1" value="1" onclick="insert('-')">-</button></td>
+  </tr>
+</table>
+</center>
+</div>
+
+  </body>
+</html>

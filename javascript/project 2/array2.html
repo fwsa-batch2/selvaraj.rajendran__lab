@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<!-- JavaScript Program to Check if An Array Contains a Specified Value -->
+
+    <script type="text/javascript">
+      let nameList = ["surya","selva","ace","surya","avles","selvaraj","jaravles"];
+      console.log(nameList);
+
+      let check1 = nameList.includes('surya',2);
+      console.log(check1);
+
+      const nameInLowerCase = 'SUrYa'.toLowerCase();  // surya
+      let check2 = nameList.includes(nameInLowerCase, 2);
+      console.log(check2);
+
+
+      for(i=0; i<nameList.length; i++){
+        nameList[i] = nameList[i].toUpperCase();
+      }
+
+      console.log(nameList);
+
+      for(i=0; i<nameList.length; i++){
+        if (nameList[i] === "SURYA"){   // SURYA == suray => true,    SURYA === surya => false
+          console.log(true);
+          }
+        }
+
+
+      // if (check){
+      //   document.write('you are all caught up')
+      // }
+      // else {
+      //   document.write('sold out')
+      // }
+    </script>
+  </body>
+</html>
