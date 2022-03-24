@@ -1,7 +1,7 @@
  ## SUBQUERY
 
 | Operator 	| Description               |
-|:---------:|:------------------------:|
+|:---------:|:-------------------------:|
 |  =        |Equal to                   | 
 |  >        |Greater than               |
 | >=        |Greater than or equal to   |
