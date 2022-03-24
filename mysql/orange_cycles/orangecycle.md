@@ -410,5 +410,17 @@ Query OK, 0 rows affected (0.05 sec)
 ### inserting data into review
 
 ```
+mysql> insert into review values(1,5,4,now(),'i bought bsa champ from orange cycle for i am happy to see my kid having great time with his new cycle','four');
+Query OK, 1 row affected (0.00 sec)
 
 ```
+### fetching data from reviews
+
+```
+mysql> select * from review;
+
+```
+| id | user_id | product_id | date                | review_text                                                                                            | stars |
+|:----|:---------|:------------|:---------------------|:--------------------------------------------------------------------------------------------------------|:-------|
+|  1 |       5 |          4 | 2022-03-24 11:46:35 | i bought bsa champ from orange cycle for i am happy to see my kid having great time with his new cycle | four  |
+
