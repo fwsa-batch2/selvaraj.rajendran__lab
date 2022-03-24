@@ -1,5 +1,10 @@
 # ORANGE CYCLE
 
+
+## **ER DIAGRAM**
+
+![ER DIAGRAM](assests/images/Flowchart.png)
+
 ## Creating database
 
 ```
@@ -424,3 +429,8 @@ mysql> select * from review;
 |:----|:---------|:------------|:---------------------|:--------------------------------------------------------------------------------------------------------|:-------|
 |  1 |       5 |          4 | 2022-03-24 11:46:35 | i bought bsa champ from orange cycle for i am happy to see my kid having great time with his new cycle | four  |
 
+
+
+
+## **EER DIAGRAM**
+![EER DIAGRAM](assests/images/orangrcycle_er_diagram.png)
