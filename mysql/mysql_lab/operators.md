@@ -1,4 +1,4 @@
- ## SUBQUERY
+ ## operators
 
 | Operator 	| Description               |
 |:---------:|:-------------------------:|
