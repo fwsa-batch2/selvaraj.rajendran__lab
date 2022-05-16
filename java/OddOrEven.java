@@ -16,6 +16,8 @@ public class OddOrEven {
             System.out.println("it is odd number");
 
         }
+
+        input.close();
         
    
     }
