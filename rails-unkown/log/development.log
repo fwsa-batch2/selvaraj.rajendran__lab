@@ -5291,3 +5291,12 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 1895)
 
 
+Started GET "/" for 127.0.0.1 at 2022-06-16 17:01:42 +0530
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 235)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 10434)
+Completed 200 OK in 25ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 13241)
+
+
