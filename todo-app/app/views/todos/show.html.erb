@@ -1,0 +1,21 @@
+<div class="box">
+<div class="col-lg-4 mx-auto">
+<div class="container">
+
+<div class="card shadow" style="width: 18rem;">
+  <div class="card-body">
+    <h2 class="card-title"> <strong>Task</strong></h2>
+    <h4 class="card-text"> <%= @todo.task %>.</h4>
+     <h5 class="card-title"> <strong>date</strong> <p> <%= @todo.date %></p></h5>
+    
+<%= link_to 'Edit', edit_todo_path(@todo),class: "btn btn-outline-dark" %> 
+<%= link_to 'Back', todos_path ,class:"btn btn-outline-danger" %>
+</div>
+<div class="alert" role="alert">
+<div class="card-header">
+<h5 id="notice"><%= notice %></h5>
+</div>
+</div>
+</div>
+</div>
+</div>

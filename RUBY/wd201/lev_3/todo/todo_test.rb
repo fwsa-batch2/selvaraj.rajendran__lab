@@ -5,3 +5,5 @@ todo_list.push(text)
 puts "the todos are \n"
 todo_list.each do |x| puts "#{x}"
 end 
+
+todo_list.map {|x|}
