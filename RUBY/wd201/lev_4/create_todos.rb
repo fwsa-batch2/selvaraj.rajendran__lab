@@ -1,4 +1,4 @@
-require "/home/selvarajrajendran/selvaraj.rajendran__lab/RUBY/wd201/lev_4/connect_db.rb"
+require '/home/selvarajrajendran/selvaraj.rajendran__lab/RUBY/wd201/lev_4/connect_db.rb'
 connect_db!
 
 ActiveRecord::Migration.create_table(:todos) do |t|

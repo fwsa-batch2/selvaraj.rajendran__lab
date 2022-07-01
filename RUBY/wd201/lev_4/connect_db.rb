@@ -4,7 +4,7 @@ def connect_db!
   ActiveRecord::Base.establish_connection(
     host: 'localhost', 
     adapter: 'mysql2',
-    database: 'todo_test', 
+    database: 'todos_test', 
     user: 'ACE', 
     password: 'karanss08'
   )

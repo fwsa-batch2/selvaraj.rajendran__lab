@@ -18,7 +18,7 @@ class TodosList
   end
 
   def print
-    @todos_list.each do |x| puts "#{x}" end
+    @todos_list.each do |x| puts " #{x}" end
   end
 end
 
@@ -30,12 +30,16 @@ list = TodosList.new
 
 puts "please enter \n [A] to add todo \n [L] to list todo"
 user_input = gets.chomp.downcase
+
+
 if user_input  == "a"
   puts "enter the text to add to todo list" 
    text = gets.chomp
    list.add(text)
+   puts "\n\nmy todo list \n"
    list.print
 elsif user_input == "l"
+  puts "my todo list"
   list.print
 else
   puts "please give 'a' or 'l' to move" 
