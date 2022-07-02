@@ -1,45 +1,258 @@
-/* .home{
-    background-image:url(/home/selvarajrajendran/selvaraj.rajendran__lab/my_portfolio/assests/images/back1.jpg);
-    width: inherit;
-    height: inherit;
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+:root {
+    --primary: #5E3BCD;
+    --seond: #AE62E5;
+    --light: #F3E9F2;
+    --black: #000000;
+    --isblack: #150F26;
+    --dark: #2C1E59;
+    --white: #FFFFFF;
+}
+
+p a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.hon {
+    height: 100vh;
+    background-color: var(--white);
+}
+
+
+/* ==========================================
+navbar starts
+========================================== */
+
+.navbar {
+    background-color: var(--isblack);
+}
+
+.logo-text {
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 2.5em;
+    color: var(--dark);
+    pointer-events: none;
+}
+
+.offcanvas-header {
+    background-color: var(--dark);
+}
+
+.offcanvas-title {
+    color: var(--light);
+    background-color: none;
+    border: none;
+}
+
+.Close {
+    border: none;
+    font-size: 2em;
+    color: var(--light);
+    background-color: var(--dark);
+    transition: 1s;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+}
+
+.Close:hover {
+    transform: rotate(180deg);
+    transition: 0.5s;
+}
+
+.offcanvas-body {
+    background-color: var(--light);
+}
+
+.offcanvas-body a {
+    color: var(--dark);
+}
+
+.offcanvas-body a:hover {
+    translate: 5px;
+    color: var(--primary);
+    border-left: 5px solid var(--dark);
+    padding-left: 5px;
+}
+
+ul.dropdown-menu {
+    background-color: var(--dark);
+}
+
+ul.dropdown-menu a {
+    color: var(--light);
+    width: 95%;
+}
+
+ul.dropdown-menu a :hover {
+    color: var(--dark);
+}
+
+.Menu {
+    background-color: var(--dark);
+    border: none;
+    font-size: 2em;
+    z-index: 20;
+    /* border-radius: 60px;
+    height: 50px;
+    width: 50px; */
+}
+
+
+/* .Menu:hover {
+    box-shadow: 5px 5px 20px var(--isblack);
+    border: 2px solid white;
 } */
 
-:root{
-    --primary: #5E3BCD;
+.Menu:hover .ham-icon {
+    border-right: 2px solid var(--light);
+    border-bottom: 2px solid var(--light);
+}
+
+.Menu:hover .menu-info {
+    right: 180px;
+    transition: 0.5s;
+    display: inline-block;
+    opacity: 1;
+    color: var(--light);
+}
+
+.menu-info {
+    position: absolute;
+    text-align: center;
+    font-size: 1em;
+    z-index: 20;
+    opacity: 0;
+    transition: 0.5s;
+    right: 100px;
+    z-index: -1;
 }
 
 
+/* ==========================================
+navbar ends
+========================================== */
 
-.navbar{
-    background-color: var(--primary);
+
+/* ==========================================
+head-text-selva-starts
+========================================== */
+
+.head-text {
+    font-family: 'Londrina Outline', cursive;
+    font-size: 80px;
+    position: absolute;
+    letter-spacing: 1px;
+    transition: 1s;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    text-align: left;
+    margin-left: -20px;
 }
-body{
-    background-image: url(../images/back1.jpg);
-    background-size: cover;
+
+.head-text:hover span::after {
+    content: "";
+}
+
+.head-text:hover {
+    color: #fff;
+    text-shadow: 0 0 10px var(--seond), 0 0 20px var(--seond), 0 0 40px var(--dark), 0 0 80px var(--dark), 0 0 160px var(--isblack);
 }
 
 
-h1{
-    animation-duration: 2s;
-    animation-name: slidein;
-    margin-left: 50%;
-    width: 100%   
-   
+/* ==========================================
+head-text-selva-ends
+========================================== */
+
+
+/* ==========================================
+footer-starts
+========================================== */
+
+.line {
+    opacity: 0;
+    border-bottom: 2px solid red;
+    width: 1px;
+    transition: 0.5s;
+    margin-top: -10px;
 }
 
-@keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%;
-    }
-  
-    75% {
-        font-size: 10em;
-        margin-left: 25%;
-        width: 150%;
-      }
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
+.box:hover .line {
+    border-bottom: 2px solid var(--light);
+    border-right: 2px solid var(--light);
+    width: 100%;
+    opacity: 1;
+}
+
+.box-Ab:hover .line {
+    border-bottom: 2px solid var(--light);
+    width: 100%;
+    opacity: 1;
+}
+
+.text-small {
+    font-size: 0.9rem;
+}
+
+.box {
+    list-style: none;
+    text-align: left;
+}
+
+.box-Ab {
+    list-style: none;
+    text-align: left;
+}
+
+.box a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.box-Ab a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.box a:hover {
+    color: var(--light);
+}
+
+.box-Ab a:hover {
+    color: var(--primary);
+    ;
+}
+
+.form-control {
+    background: #212529;
+    border-color: #545454;
+}
+
+.form-control:focus {
+    background: #212529;
+}
+
+footer {
+    background: var(--isblack);
+    transition: 1s;
+}
+
+footer:hover {
+    background-color: var(--black);
+}
+
+footer:hover .container {
+    border-bottom: 1px solid var(--primary);
+    border-right: 1px solid var(--primary);
+}
+
+.h1 {
+    font-family: 'Permanent Marker', cursive;
+}
+
+
+/* ==========================================
+footer ends
+========================================== */
