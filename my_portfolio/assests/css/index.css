@@ -14,17 +14,24 @@
         color: var(--primary);
     }
     
-    .hon {
+    .nav.active {
+        translate: 5px;
+        color: var(--primary);
+        border-left: 5px solid var(--dark);
+        padding-left: 5px;
+        text-decoration: none;
+    }
+    
+    .a .hon {
         height: 100vh;
         background-color: var(--isblack);
-        background-image: url(../images/warrior.jpg);
     }
     /* ==========================================
 navbar starts
 ========================================== */
     
     .navbar {
-        background-color: var(--primary);
+        background-color: var(--isblack);
     }
     
     .logo-text {
@@ -67,6 +74,8 @@ navbar starts
     
     .offcanvas-body a {
         color: var(--dark);
+        margin-top: 5px;
+        transition: ease-out 0.1s;
     }
     
     .offcanvas-body a:hover {
@@ -74,6 +83,7 @@ navbar starts
         color: var(--primary);
         border-left: 5px solid var(--dark);
         padding-left: 5px;
+        transition: ease-in 0.1s;
     }
     
     ul.dropdown-menu {
@@ -90,7 +100,7 @@ navbar starts
     }
     
     .Menu {
-        background-color: var(--primary);
+        background-color: transparent;
         border: none;
         font-size: 2em;
         z-index: 20;
@@ -152,7 +162,7 @@ head-text-selva-starts
     
     .head-text:hover {
         color: #fff;
-        text-shadow: 0 0 10px var(--dark), 0 0 20px var(--primary), 0 0 40px var(--seond), 0 0 80px var(--l), 0 0 160px var(--isblack);
+        text-shadow: 0 0 10px var(--dark), 0 0 20px var(--primary), 0 0 40px var(--seond), 0 0 80px var(--l), 0 0 160px var(--light);
     }
     /* ==========================================
 head-text-selva-ends
