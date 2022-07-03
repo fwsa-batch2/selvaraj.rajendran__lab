@@ -23,9 +23,87 @@
     }
     
     .hon {
-        background-color: var(--isblack);
         display: flex;
         height: 100vh;
+        width: 100%;
+        animation-duration: 1s;
+        transition: ease-in-out 0.1ms;
+        background-image: url(./../images/MWQ9.gif);
+        background-attachment: fixed;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-color: var(--black);
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .hon:hover {
+        background-color: var(--primary);
+        transition: ease-in-out 0.5s;
+        background-image: url(none);
+    }
+    
+    .hon:hover .ace {
+        left: 40px;
+        top: 0px;
+        transition: ease-in-out 0.5s;
+    }
+    
+    .ace {
+        position: absolute;
+        left: 50%;
+        width: 700px;
+        height: inherit;
+        top: 0;
+        transition: ease-in-out 0.5s;
+    }
+    
+    .holo-text {
+        font-family: 'Londrina Outline', cursive;
+        color: var(--light);
+        font-size: 5em;
+        z-index: 20;
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        text-align: left;
+        display: flex;
+    }
+    
+    .holo-text.two {
+        top: 45%;
+        left: 5%;
+    }
+    
+    .holo-text.thre {
+        top: 75%;
+    }
+    
+    .main-text {
+        width: 650px;
+        height: inherit;
+        background-color: transparent;
+        position: relative;
+        left: 50%;
+        transition: 0.1ms;
+        padding-right: 20px;
+    }
+    
+    .hon:hover .main-text {
+        border-right: 50px solid var(--isblack);
+        transition: ease-in-out 0.5s;
+    }
+    
+    .name {
+        color: black;
+        text-align: left;
+        font-size: 6em;
+        pointer-events: none;
+    }
+    
+    .main-text p {
+        color: black;
+        pointer-events: none;
     }
     /* ==========================================
 navbar starts
@@ -33,6 +111,10 @@ navbar starts
     
     .navbar {
         background-color: var(--isblack);
+    }
+    
+    .center-text {
+        color: var(--light);
     }
     
     .logo-text {
@@ -158,8 +240,23 @@ head-text-selva-starts
         margin-left: -20px;
     }
     
-    .head-text:hover span::after {
-        content: "";
+    .head-text span {
+        display: none;
+        transition: ease-in-out 2s;
+    }
+    
+    .head-text span img {
+        z-index: 20;
+    }
+    
+    .head-text:hover span {
+        display: block;
+        margin-left: -100px;
+        margin-top: -22px;
+        transition: ease-in-out 2s;
+        background-color: var(--black);
+        width: 600px;
+        border: 2px solid var(--light);
     }
     
     .head-text:hover {
@@ -338,6 +435,8 @@ section 2
     .second {
         display: flex;
         width: inherit;
+        z-index: 200px;
+        background-color: var(--white);
     }
     
     .carousel {
@@ -385,5 +484,17 @@ section 2 ends
         }
         .hon {
             background-color: red;
+        }
+    }
+    
+    @keyframes popin {
+        0% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 0.5;
+        }
+        100% {
+            opacity: 1;
         }
     }
