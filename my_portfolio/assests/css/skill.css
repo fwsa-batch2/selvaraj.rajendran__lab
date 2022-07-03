@@ -11,7 +11,6 @@
 .AB-container {
     position: relative;
     height: 500px;
-    width: 100%;
     padding: 10px;
     display: flex;
     align-items: center;
@@ -65,7 +64,7 @@
 
 .emptybar {
     background-color: var(--light);
-    width: 80%;
+    width: 99%;
     height: 100%;
 }
 
@@ -80,7 +79,7 @@
 }
 
 .card:hover .filledbar {
-    width: 80%;
+    width: 99%;
     transition: 0.4s ease-out;
 }
 
@@ -116,12 +115,43 @@
     height: 280px;
     margin-left: 20px;
     position: relative;
-    right: 0;
     width: 250px;
-    border: 2px solid red;
+    text-align: left;
+    overflow: hidden;
+}
+
+.text-holder h1 {
+    font-family: 'Permanent Marker', cursive;
 }
 
 .info {
     color: var(--light);
     padding-top: 5px;
 }
+
+.info,
+.title,
+.text-holder {
+    pointer-events: none;
+}
+
+
+/* dong */
+
+
+/* .dong {
+    background-color: white;
+    border: 2px solid var(--dark);
+    border-radius: 60px;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    z-index: 3000;
+    font-size: 3em;
+    top: 80%;
+    left: 89.5%;
+    padding: 0;
+} */
+
+
+/* dong-ends */

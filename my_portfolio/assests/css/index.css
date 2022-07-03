@@ -22,9 +22,10 @@
         text-decoration: none;
     }
     
-    .a .hon {
-        height: 100vh;
+    .hon {
         background-color: var(--isblack);
+        display: flex;
+        height: 100vh;
     }
     /* ==========================================
 navbar starts
@@ -148,8 +149,9 @@ head-text-selva-starts
         font-family: 'Londrina Outline', cursive;
         font-size: 80px;
         position: absolute;
+        top: 15%;
         letter-spacing: 1px;
-        transition: 1s;
+        transition: ease-in-out 0.5s;
         writing-mode: vertical-rl;
         text-orientation: upright;
         text-align: left;
@@ -162,7 +164,8 @@ head-text-selva-starts
     
     .head-text:hover {
         color: #fff;
-        text-shadow: 0 0 10px var(--dark), 0 0 20px var(--primary), 0 0 40px var(--seond), 0 0 80px var(--l), 0 0 160px var(--light);
+        transition: ease-in-out 0.5s;
+        text-shadow: 0 0 10px var(--light), 0 0 20px var(--light), 0 0 40px var(--light), 0 0 80px var(--light), 0 0 160px var(--white);
     }
     /* ==========================================
 head-text-selva-ends
@@ -328,3 +331,59 @@ wave
     /* ==========================================
 wave
 ========================================== */
+    /* ==========================================
+section 2
+========================================== */
+    
+    .second {
+        display: flex;
+        width: inherit;
+    }
+    
+    .carousel {
+        position: relative;
+        bottom: 0;
+        overflow: hidden;
+        height: 500px;
+        width: inherit;
+        background-color: transparent;
+    }
+    
+    .bigtext {
+        position: relative;
+        width: inherit;
+        height: 500px;
+        display: inline-block;
+        z-index: 300;
+        text-align: right;
+        padding: 20px;
+    }
+    
+    .bigtext h1 {
+        text-align: right;
+        font-size: 70px;
+        font-family: 'Permanent Marker', cursive;
+        pointer-events: none;
+    }
+    
+    .bigtext p {
+        pointer-events: none;
+    }
+    
+    .btn.btn-outline-dark:hover {
+        background-color: var(--isblack);
+    }
+    /* ==========================================
+section 2 ends
+
+
+========================================== */
+    
+    @media screen and(min-width: 600px) {
+        .head-text {
+            opacity: 0;
+        }
+        .hon {
+            background-color: red;
+        }
+    }
