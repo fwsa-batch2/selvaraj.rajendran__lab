@@ -21,7 +21,10 @@
 
 <body>
 
-
+    <div class="pageload" id="preload">
+        <h1>Please wait a ... <br> Minute <br> loading.. .
+        </h1>
+    </div>
 
 
     <div class="container">
@@ -101,11 +104,12 @@
 
 
         <div class="img-me">
+            <span class="back-line"> I CREATE MAGIC IF YOU BELEIVE SO</span>
+            <span class="back-line two">  </span>
             <img src="/assests/images/bg.png" alt="">
 
-            <span class="back-line"></span>
         </div>
-        <h1 class="big-text" data-0="left: 20%; top:10%;transition: 1s" data-500="left: 20%; top:100%; transition: 0.5s;" data-1500="top:200%;">HELLO!!! <br> <span> I AM SELVA</span></h1>
+        <h1 class="big-text" data-0="left: 34%; top:10%;transition: 1s" data-500="left: 20%; top:100%; transition: 0.5s;" data-1500="top:200%;">HELLO!!! <br> <span> I AM SELVA</span></h1>
     </div>
 
     <!-- socail media link -->
@@ -126,29 +130,13 @@
                 <a href="#"><i class='bx bxl-github' ></i></a>
             </li>
         </ul>
+
+    </div>
+    <div class="scroll-key">
+        <i class='bx bxs-chevron-down-circle' data-0="transform:rotate(0deg); " data-500="transform:rotate(-90deg);"></i>
     </div>
     <!-- socail media link -->
-    <div class="space-filler">
 
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section> 9</section>
-
-    </div>
 
 
 
@@ -202,9 +190,17 @@
     <script type="text/javascript ">
         var s = skrollr.init();
     </script>
+    <script>
+        var loader = document.getElementById("preload")
+        window.addEventListener("load", function() {
+            loader.style.display = "none";
+        })
+    </script>
     <!-- script  -->
 
 </body>
 
+
+</html>
 
 </html>
