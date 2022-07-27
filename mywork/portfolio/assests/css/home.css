@@ -83,7 +83,7 @@
             /* navbar -------------------------------------------------------------------->*/
             
             .container-bg {
-                background-color: red;
+                background-color: var(--white);
                 width: 100%;
                 position: fixed;
                 display: flex;
@@ -94,14 +94,13 @@
             
             .container-bg section {
                 background-color: var(--white);
-                color: black;
-                font-size: 3em;
                 min-width: 100%;
                 height: 100vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                z-index: 40;
+                border-left: 40px outset var(--blue);
+                /* border: 1px solid red; */
             }
             /* social box ----------------------------------------------------------------------------*/
             
@@ -276,7 +275,7 @@
                 display: flex;
                 justify-content: center;
                 background-color: var(--blue);
-                z-index: 12;
+                z-index: 20;
                 /* border-radius: 50%; */
             }
             
@@ -303,7 +302,7 @@
             .img-me img {
                 height: 400px;
                 width: auto;
-                z-index: 12;
+                z-index: 20;
                 /* filter: saturate(); */
             }
             
@@ -324,6 +323,7 @@
                 top: 20%;
                 word-wrap: normal;
                 margin-top: -40px;
+                z-index: 20;
                 /* text-orientation: sideways-right; */
             }
             
@@ -337,6 +337,157 @@
                 animation: bounce 2s ease-in-out;
             }
             /* circle older ------------------------------------------------------------------*/
+            /* about me {} */
+            
+            .about_me {
+                display: flex;
+                background-color: var(--blue) !important;
+                height: auto;
+                width: 100vh;
+                z-index: 12;
+                /* background-image: url(/assests/images/wallpaperflare.com_wallpaper\(2\).jpg); */
+            }
+            
+            .about-one {
+                width: 50%;
+                position: relative;
+                height: 100vh;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                /* align-items: center; */
+            }
+            
+            .about-two .inner-heading {
+                font-size: 4rem;
+                font-weight: 900;
+                text-decoration: underline;
+                margin-top: 50px;
+                text-transform: lowercase;
+                color: var(--black);
+                z-index: 30;
+            }
+            
+            .about-two {
+                width: 50%;
+                position: relative;
+                height: 100vh;
+                background-color: transparent;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* align-items: center; */
+            }
+            
+            .profile {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 340px;
+                width: 300px;
+                /* background: var(--primary); */
+                overflow: hidden;
+                /* border-radius: 50%; */
+                position: absolute;
+                top: 20%;
+                border: 8px solid var(--primary);
+            }
+            
+            .profile img {
+                height: 350px;
+                z-index: 20;
+            }
+            
+            .glass {
+                width: 40%;
+                height: 80vh;
+                background: rgba( 255, 255, 255, 0.18);
+                border: 1px solid rgba( 255, 255, 255, 0.18);
+                position: absolute;
+                left: 70%;
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.50);
+                backdrop-filter: blur( 10px);
+                -webkit-backdrop-filter: blur( 20px);
+                /* border-radius: 10px; */
+                z-index: 40;
+            }
+            
+            .about-text {
+                width: 80%;
+                position: relative;
+                background: var(--primary);
+                border: 1px solid rgba( 255, 255, 255, 0.18);
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.50);
+                backdrop-filter: blur( 10px);
+                -webkit-backdrop-filter: blur( 20px);
+                /* border-radius: 10px; */
+                z-index: 50;
+                padding: 20px;
+                font-size: 1.4rem;
+                font-weight: 900;
+            }
+            
+            .round-holder {
+                height: 100vh;
+                width: 100vw;
+                z-index: 10;
+                position: absolute;
+                right: 0;
+                top: 0;
+                /* overflow: hidden; */
+            }
+            
+            .round-holder :nth-child(1) {
+                width: 200px;
+                height: 200px;
+                right: -100px;
+                bottom: -100px;
+                opacity: 0.2;
+            }
+            
+            .round-holder :nth-child(2) {
+                width: 400px;
+                height: 400px;
+                right: -200px;
+                bottom: -200px;
+                opacity: 0.5;
+            }
+            
+            .round-holder :nth-child(3) {
+                width: 600px;
+                height: 600px;
+                right: -300px;
+                bottom: -300px;
+                opacity: 0.7;
+            }
+            
+            .round-holder :nth-child(4) {
+                width: 800px;
+                height: 800px;
+                right: -400px;
+                bottom: -400px;
+                opacity: 0.8;
+            }
+            
+            .round-holder :nth-child(5) {
+                width: 1000px;
+                height: 1000px;
+                right: -500px;
+                bottom: -500px;
+                opacity: 0.9;
+            }
+            
+            .round {
+                position: absolute;
+                border-radius: 50%;
+                background: rgba( 0, 0, 0, 0.15);
+                animation: ripple 15s infinite;
+                box-shadow: 0px 0px 1px 0px #508fb9;
+                z-index: 10;
+                border: 1px solid var(--primary);
+            }
+            /* about me {} */
             
             @media (max-width: 900px) {
                 .container-bg {
@@ -431,5 +582,17 @@
                 }
                 100% {
                     transform: scale(1, 1) translateY(0);
+                }
+            }
+            
+            @keyframes ripple {
+                0% {
+                    transform: scale(0.8);
+                }
+                50% {
+                    transform: scale(1.2);
+                }
+                100% {
+                    transform: scale(0.8);
                 }
             }
