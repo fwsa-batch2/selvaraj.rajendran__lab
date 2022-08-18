@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+<p>
+  <strong>Name:</strong>
+  <%= @ace.name %>
+</p>
+<%= image_tag @ace.img ,width:"300px" if @ace.img.attached?%>
+<%= link_to 'Edit', edit_ace_path(@ace) %> |
+<%= link_to 'Back', aces_path %>
+
+</div>

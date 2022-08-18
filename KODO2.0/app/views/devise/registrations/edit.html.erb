@@ -1,0 +1,61 @@
+
+<div class="container">
+<div class="edit-holder">
+
+<h2>Hii!!<%= current_user.Username %></h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+ 
+   <div class="input-holder">
+            <i class='bx bxs-user'></i>
+            <%= f.text_field :Username, autofocus: true, autocomplete: "Username" ,class: "no-border" ,placeholder: "Name" %>
+          </div>
+
+  <div class="input-holder">
+    <i class='bx bxs-envelope' ></i>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class: "no-border"%>
+  </div>
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div class="h6">Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <div class="field">
+    <i class="small">(password: leave blank if you don't want to change it)</i><br />
+   <div class="input-holder">
+   <i class='bx bxs-lock-alt' ></i>
+    <%= f.password_field :password, autocomplete: "new-password",class:"no-border" %>
+   </div>
+    <% if @minimum_password_length %>
+      <br />
+      <em><%= @minimum_password_length %> characters minimum</em>
+    <% end %>
+  </div>
+
+    <%= f.label :password_confirmation %><br />
+  <div class="input-holder">
+   <i class='bx bxs-lock-alt' ></i>
+
+    <%= f.password_field :password_confirmation, autocomplete: "new-password",class: "no-border" %>
+  </div>
+
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div class="input-holder">
+   <i class='bx bxs-lock-alt' ></i>
+
+    <%= f.password_field :current_password, autocomplete: "current-password",class: "no-border" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Update",class:"btn btn-primary" %>
+  </div>
+<% end %>
+
+
+<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,class:"btn btn-outline-danger" %></p>
+
+<%= link_to "Back", :back %>
+
+</div>
+</div>

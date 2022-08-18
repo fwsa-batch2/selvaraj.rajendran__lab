@@ -1,0 +1,23 @@
+<h1>Blogs#show</h1>
+<p>Find me in app/views/blogs/show.html.erb</p>
+
+<h1>
+<%= @blog.category_id %> 
+</h1> 
+<h3><%= @blog.title %></h3>
+<p> <%= @blog.category.category %> </p>
+<p> </p>
+
+<div class="flex-cen"> 
+<%= @blog.content %>
+
+ <%= @blog.iframe.html_safe %>
+ <%# <br> <%= image_tag @blog.image if @plant.image.attached? %>   %>
+
+
+</div>
+
+
+<%= link_to "edit", edit_blog_path(@blog.id) %>
+<%= link_to "delte", blog_path(@blog.id), method: :delete%>
+<%= link_to "back", blogs_path  %>

@@ -1,0 +1,26 @@
+<%= form_with(model: ace) do |form| %>
+  <% if ace.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ace.errors.count, "error") %> prohibited this ace from being saved:</h2>
+
+      <ul>
+        <% ace.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.rich_text_area :name %>
+  </div>
+   <div class="field">
+    <%= form.label :img %>
+    <%= form.file_field :img %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

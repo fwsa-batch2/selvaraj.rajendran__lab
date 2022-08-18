@@ -1,0 +1,57 @@
+<div class="blog-holder">
+  <div class="menu-blog"> 
+  <%= link_to 'New Blog' , new_blog_path,class:"btn btn-primary" %> <br>
+  <%= link_to 'blogs' , blogs_path,class:"btn btn-primary" %> <br>
+
+  <%= link_to 'saved blogs' , savedblogs_path,class:"btn btn-primary" %> <br>
+
+  </div>
+  <div class="show-blog">
+    <% @blogs.each do |blog| %>
+    <div class="item">
+
+
+      <!-- <%= image_tag blog.blogImage ,width:"300px" if blog.blogImage.attached?%> -->
+
+
+      <button type="button" class="btn btn-primary bga" data-bs-toggle="modal" data-bs-target="#<%= blog.title.gsub(/\s+/, '') %><%= blog.id %>">
+        <%= blog.title %>
+      </button>
+<a href="/saveblog/<%= blog['id'] %>">
+     <div class="btn btn-outline-primary" > <i class='bx bx-bookmark-heart'></i></div>
+</a>
+      <!-- Modal -->
+      <div class="modal fade" id= "<%= blog.title.gsub(/\s+/, '') %><%= blog.id %>" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">
+                <%= blog.title %>
+              </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <%= blog.content %>
+                <%= image_tag blog.blogImage ,width:"300px" if blog.blogImage.attached?%>
+
+            </div>
+            <div class="modal-footer">
+              <% if current_user.id=blog.user_id %>
+
+                <%= link_to 'Show' , blog %>
+                  <%= link_to 'Edit' , edit_blog_path(blog) %>
+                    <%= link_to 'Destroy' , blog, method: :delete, data: { confirm: 'Are you sure?' } %>
+                      <% else %>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <% end %>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <div class="item"></div> 
+  </div>
+</div>

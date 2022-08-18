@@ -1,0 +1,67 @@
+<nav class="nav-holder">
+    <div class="container">
+        <div class="navbar-custom">
+            
+            
+            <%= link_to root_path ,class:"link-tag" do  %>
+            
+            
+            <span class="logo">
+                <%= image_tag("logo.png" ,height: '60px' ) %>
+            </span>
+
+            <% end %>
+            <div class="menu-holder">
+                <ul class="nav-item">
+            <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class=" <%= is_active?(courses_index_path) %> ">Courses</span>   <% end %> </li>
+                   <li> <%= link_to blogs_path ,class: "link-tag" do %>   <span class=" <%= is_active?(blogs_path) %> ">blog</span>   <% end %> </li>  
+                    <li> <%= link_to 'http://localhost:3000/#about' ,class: "link-tag" do %>   <span class=" a ">About</span>   <% end %> </li> 
+                   
+                 <!-- <li> <%= link_to '/courses/index' ,class: "link-tag" do %>   <span class="a"></span>   <% end  %> </li> -->
+                </ul>
+            </div>
+
+
+            <div class="darkmode-search">
+                <div class="darkmode">
+                    <input type="checkbox" id="dark-box" hidden>
+                    <i id="moon" class='bx bxs-moon'></i>
+                </div>
+
+                <div class="search-box">
+                    <i id="search" class='bx bx-search'></i>
+                  
+
+                    <form action="/search">
+                    <div id ="search-field" class="search-field">
+                    <input type="text"  name='q' placeholder="search courses">
+                    <button type="submit" class="btn btn-outline-primary">
+                     <i class='bx bx-search'></i>
+                    </button>
+                    </div>
+                    </form>
+
+                </div>
+                 <% if user_signed_in?  %>
+                       
+    <i class='bx bxs-user-circle mouse' data-bs-toggle="dropdown" aria-expanded="false" ></i>
+                        
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item mouse-no" > <%= current_user.Username.capitalize %></a></li>
+    <li> <%= link_to 'Edit profile' ,edit_user_registration_path ,class: "dropdown-item"%> </li>
+    <li><hr class="dropdown-divider"></li>
+    <li> 
+    
+       <%= link_to 'Log out' ,destroy_user_session_path,class:"dropdown-item",method: :delete %> 
+    </li>
+  </ul>
+              <% else %>
+                   <li> <%= link_to new_user_registration_path ,class: "btn btn-outline-log" do %>   <span class="">Sign up</span>   <% end %> </li>  
+
+                <% end %>                  
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+    <%= javascript_pack_tag "Dark_Mode.js" %>

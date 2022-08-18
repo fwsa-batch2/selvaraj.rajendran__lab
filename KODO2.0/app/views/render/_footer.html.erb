@@ -1,0 +1,63 @@
+<footer class="footer-kodo">
+
+  <div class="container">
+
+    <div class="footer-holder">
+
+       <%= link_to root_path ,class:"link-tag" do  %>
+            
+            
+            <span class="logo">
+                <%= image_tag("logo.png" ,height: '60px' ) %>
+            </span>
+
+            <% end %>
+      <div class="links-items">
+        <ul class="footer-item">
+          <li>
+            <%= link_to "| Courses ","/courses/index" ,class: "link-tag" %>
+          </li>
+          <li>
+            <%= link_to "| About ","/courses/index" ,class: "link-tag" %>
+          </li>
+          <li>
+            <%= link_to "|  Mingle ","/courses/index" ,class: "link-tag" %>
+          </li>
+
+          <%# <li><a>| case study</a> %>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="icon-holder">
+
+        <ul class="icon-item">
+
+
+          <li> <%= link_to "https://github.com/Selvaraj-R/Final_project" , target: :_blank ,class:"link-tag" do %> <i class='bx bxl-github'></i>  <% end %>  </li>
+          <li><i class='bx bxl-linkedin'></i></li>
+          <li> <i class='bx bxl-instagram'></i></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="line-hr">
+    <div class="second-footer">
+
+      <p class="text blue">
+        copyright@2022 KODO.SELVA</p>
+
+      <p class="text blue">
+        Contact SELVA -></p>
+      <div class="mine">
+        <ul class="social-box">
+          <li><i class='bx bxl-github'></i></li>
+          <li><i class='bx bxl-instagram'></i></li>
+          <li><i class='bx bxl-linkedin'></i></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+</footer>

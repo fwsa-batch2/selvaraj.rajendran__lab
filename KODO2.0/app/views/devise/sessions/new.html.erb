@@ -1,0 +1,41 @@
+<div class="form-container">
+  <div class="cir-back-2"></div>
+  <div class="form-holder login">
+    <div class="title">LOGIN</div>
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="input-holder">
+        <i class='bx bx-user'></i>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "email", class: "no-border" %>
+      </div>
+      <div class="input-holder">
+        <i class='bx bx-lock-alt'></i>
+        <%= f.password_field :password, autocomplete: "current-password",placeholder: "password" ,class: "no-border" %>
+      </div>
+      <div class="btn-login">
+       <span>
+       <%= f.submit "Log in" ,class:"btn btn-primary" %>
+       </span> 
+      </div>
+     
+      <div class="flex-cl">
+    <span class="h5">or</span>
+      <%= render "devise/shared/links"%>
+  </div>
+      
+
+    <% end %>
+  </div>
+
+  <div class="text-holder-signup">
+  <div class="text-box">
+  <h1>New Here?</h1>
+  <span>Sign up  and explore the new courses</span>
+  
+  </div>
+  <div class="imgholder">
+    <%= image_tag("lg.jpg",width: "500px" )%>
+  </div>
+  </div>
+</div>
+
+

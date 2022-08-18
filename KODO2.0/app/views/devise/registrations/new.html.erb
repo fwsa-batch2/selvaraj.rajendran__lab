@@ -1,0 +1,84 @@
+ 
+
+  <%# <%=render "devise/sessions/new" %>
+
+    
+    <div class="container">
+      <div class="form-container" >
+        <div class="cir-back"></div>
+        <div class="form-holder sign">
+          <div class="title">
+            Sign Up
+          </div>
+          
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          
+          <div class="input-holder">
+            <i class='bx bxs-user'></i>
+            <%= f.text_field :Username, autofocus: true, autocomplete: "Username" ,class: "no-border" ,placeholder: "Name" ,:required => true %>
+          </div>
+          
+          <div class="input-holder">
+            <i class='bx bxs-envelope' ></i>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "no-border" ,placeholder:"email" %>
+            
+          </div>
+          <% if @minimum_password_length %>
+          <span class="h6 btn-login">(<%= @minimum_password_length %>
+            characters minimum password)</span>
+            <% end %>
+            <div class="input-holder">
+              <i class='bx bxs-lock-alt' ></i>
+              <%= f.password_field :password, autocomplete: "new-password" ,class: "no-border",placeholder:"password" %> <br>
+              
+              
+              
+            </div>
+            <div class="input-holder">
+              <i class='bx bxs-lock-alt' ></i>
+              <%= f.password_field :password_confirmation, autocomplete: "new-password"  ,class: "no-border",placeholder:"confirm password"%>
+            </div>
+            
+            <div class="btn-login">
+              <%= f.submit "Sign up" ,class:"btn btn-primary " %>
+            </div>
+            <% end %>
+            
+            
+            
+          </div>
+          <div  id="not">
+            <%= render "devise/shared/error_messages" , resource: resource %>
+          </div>
+          
+          
+   
+</div>
+<div class="text-holder-signup regis">
+  <div class="text-box regis-box">
+  <h1>Hey!!</h1>
+  <span>already have a account?</span>
+  <br>
+  <br>
+  <%=render "devise/shared/links" %> 
+  </div>
+  <div class="imgholder regis-img">
+    <%= image_tag("sg.jpg",width: "600px" )%>
+  </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    console.log("test")
+    setTimeout(function(){
+      $('#not').fadeOut("slow", function(){
+        $(this).remove();
+      })
+    },3500);
+  });
+</script>
+
+
+  
+           

@@ -1,0 +1,180 @@
+
+
+    <%# <%= render "render/navbar" %> 
+
+<div class="E-holder">
+
+  
+  <div class="holder-img">
+
+    <%= image_tag("hm.png" , class:"img") %>
+  </div>
+
+  <div class="container">
+    <section class="sec-one">
+      <%# <div class="tri">
+  </div>
+  <div class="cir"> </div> %>
+
+  <span class="scroll">
+    <i class='bx bxs-chevrons-down'></i>
+  </span>
+
+  <div class="one-text">
+    <h1>
+      Find the best
+      <br>
+      online courses &
+      <br>
+      learn
+    </h1>
+
+    <p class="small-text"> “Study without desire spoils the memory, and it retains nothing that it takes
+      in.” <br>
+
+    </p>
+    <%# <button class="btn btn-outline-kodo"> Explore courses </button> %>
+
+      <%= link_to "Explore Courses" ,"courses/index", class: "btn btn-outline-kodo" %>
+  </div>
+
+  <div class="one-img">
+  </div>
+
+  </section>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<section class="sec-courses">
+
+
+  <h1 class="t-header  text"> COURSES WE OFFER</h1>
+
+  <p class=" t-s-header blue b-space"> Let's build the future of the web, together</p>
+
+  <ul class="cards">
+    <li>
+      <a href="#" class="card">
+        <%= image_tag("logo/HTMLB.png" , class:"card_image") %>
+          <div class="card__overlay">
+            <div class="card__header">
+              <div class="card__header-text">
+                <h3 class="card__title t-s-header blue"> HTML:5</h3>
+                <span class="card__lesson"> 24 lessons</span>
+                <span class="nav-arrow"><i class='bx bxs-right-arrow-circle'></i></span>
+              </div>
+            </div>
+            <p class="card__description">HTML is the standard markup language for Web pages. With HTML you can create
+              your own Website. HTML is easy to learn - You will enjoy it!</p>
+          </div>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="card">
+        <%= image_tag("logo/cssb.png" , class:"card_image") %>
+          <div class="card__overlay">
+            <div class="card__header">
+              <div class="card__header-text">
+                <h3 class="card__title t-s-header blue "> CSS:3</h3>
+                <span class="card__lesson"> 12 lessons</span>
+                <span class="nav-arrow"><i class='bx bxs-right-arrow-circle'></i></span>
+              </div>
+            </div>
+            <p class="card__description">CSS is the language we use to style an HTML document. CSS describes how HTML
+              elements should be displayed.- You will enjoy it!</p>
+          </div>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="card">
+        <%= image_tag("logo/jsb.png" , class:"card_image") %>
+          <div class="card__overlay">
+            <div class="card__header">
+              <div class="card__header-text">
+                <h3 class="card__title t-s-header blue "> JS </h3>
+                <span class="card__lesson"> 60 lessons</span>
+                <span class="nav-arrow"><i class='bx bxs-right-arrow-circle'></i></span>
+              </div>
+            </div>
+            <p class="card__description">JavaScript is the world's most popular programming language. JavaScript is the
+              programming language of the Web.- You will enjoy it!</p>
+          </div>
+      </a>
+    </li>
+
+
+
+  </ul>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-holder-1" id="about">
+  <div class="container">
+
+
+    <h1 class="text">About.<span style="color: var(--primary) ;">KODO</span></h1>
+    <section class="sec-two">
+
+      <div class="sec-about">
+        <p> WE are group of students who love coding and programming and we created a website which we thought
+          we had when we learned programming language and the result is "<span
+            style="color: var(--primary) ;">KODO</span>" <br>
+          <br>
+          <strong>what is <span style="color: var(--primary) ;">KODO</span>?</strong>
+          <br>
+          In Japanese the word <span style="color: var(--primary) ;">KODO</span> means: “heartbeat,” the
+          primal source of all rhythm. The sound of the great taiko is said to resemble a mother's heartbeat
+          as felt in the womb,
+
+
+          <br><br>
+          <strong>why <span style="color: var(--primary) ;">KODO</span>?</strong> <br>
+
+          we are group of enthusiastic learner who loves learning and we are sharing what we learnt in this
+          website. <br> we <span class="blue"> BELIEVE </span> educating a child will always help him achieve
+          his <span class="blue">DREAMS</span>
+        </p>
+
+        <h5><span class="blue"> &#8220; LIFE IS ENDLESS LOOP OF LEARNING &#8221;</span></h5>
+
+        <br>
+        <p>as long you <SPAN class="blue">ENJOY</SPAN> our courses thats enough </p>
+      </div>
+      <div class="about-img">
+        <%= image_tag("ab.png" ,width: "600px" ,class: "ab-img" ) %>
+          <%# <%=image_tag("abt.png" ,width: "600px" ,class: "ab-img" ) %>
+            <%# <%=image_tag("abc.png" ,width: "600px" ,class: "ab-img" ) %>
+      </div>
+    </section>
+  </div>
+</div>
+
+
+
+
+      <%= render "render/footer" %>
+
+
+
+

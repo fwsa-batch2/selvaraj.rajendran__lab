@@ -1,0 +1,43 @@
+<nav class="navbar-m">
+
+  <a href="/">
+    <label class="logo">
+      <%= image_tag("logo2.png" ,size: '100x50') %>
+    </label>
+    </a>
+  <ul id="nav-bar" class="text-holder ">
+    <%= link_to "/courses/learn", class: "link-tag" do %>
+      <li class="a">
+        Learn</li>
+    <% end %>
+    <%= link_to "/courses/index", class: "link-tag" do %>
+      <li class="a">Courses</li>
+    <% end %>
+
+    <%= link_to "/homes/about", class: "link-tag" do %>
+      <li class="a">About</li>
+    <% end %>
+
+<%= link_to "/courses/index", class: "link-tag" do %>
+      <li class="a">
+      Community
+    </li>
+    <% end %>
+    
+    <%# <li> <a href="# ">login</a> </li> %>
+    <%# <li> <a class="getsign" href="#">get started</a> </li> %>
+    <li>
+      <input type="checkbox" id="dark-box" hidden>
+      <i id="dark" class='bx bxs-moon'></i>
+    </li>
+
+    <%= link_to "homes/about" do %>
+    <% end %>
+
+  </ul>
+
+  <label id="icon-menu" onclick="myMenu()">
+    <i id="close" class='bx bx-menu'></i>
+  </label>
+</nav>
+<%= javascript_pack_tag "dark-mode.js" %>

@@ -1,0 +1,74 @@
+.footer-kodo{
+    /* height: 80vh; */
+    width: 100%;
+    background-color: var(--bg);
+    position: relative;
+}
+
+.footer-holder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg);
+
+    padding-top: 20px;
+
+}
+.links-items .footer-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+.footer-item li {
+    padding: 5px 20px;
+    cursor: pointer;
+    color: var(--b-s-text);
+}
+.icon-item{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+}
+.icon-item li {
+    padding: 5px 20px;
+    color: var(--b-s-text);
+}
+.icon-item li:hover,.footer-item li:hover{
+    color: var(--primary);
+}
+.second-footer{
+    background-color: var(--bg);
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.mine
+{
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+.social-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+.social-box li{
+    padding: 0px 20px;
+    transform: rotate(180deg);
+}

@@ -1,0 +1,191 @@
+<section class="courses">
+  <div class="container">
+    <div class="flex">
+      <div class="cr-one">
+        <div class="text-holder-course">
+          <h1 class="t-header blue">
+            Courses
+          </h1>
+          <p class="t-s-text text">
+            Explore the courses and Start learning for free
+            <br>
+            New to Computer we have what you need
+          </p>
+        </div>
+
+        <div class="one">
+
+          <%= link_to '/courses/content' , class:"link-tag" do %>
+            <span class="card">
+              <%= image_tag("logo/cf.png" , class:"card_image") %>
+              <div class="card__overlay">
+                <div class="card__header">
+                  <div class="card__header-text">
+                    <h3 class="card__title t-s-header blue">
+                      Computer Fundamentals</h3>
+                    <span class="card__lesson">
+                      20 lessons</span>
+                    <span class="nav-arrow"><i class='bx bxs-right-arrow-circle'></i></span>
+                  </div>
+                </div>
+
+                <p class="card__description">This course deals with fundamentals of computer. Which
+                  includes generations of computer, evolution and development
+                  of microprocessor,etc.
+                </p>
+              </div>
+            </span>
+          <% end %>
+
+        </div>
+      </div>
+      <div class="cr-two" id="course-img">
+
+        <%= image_tag("cu.png" ,width:"800px" ,) %>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cat-course">
+
+  <div class="container">
+
+    <div class="filter-menu">
+      <h1 class="blue t-s-header">
+        Collections</h1>
+
+      <div class="filter-item">
+
+        <div class="item-menu">
+          <button class="btn btn-outline-kodo">
+            All
+          </button>
+          <button class="btn btn-outline-kodo">
+            English
+          </button>
+          <button class="btn btn-outline-kodo">
+            Front-end
+          </button>
+          <button class="btn btn-outline-kodo">
+            Back-end
+          </button>
+          <button class="btn btn-outline-kodo">
+            Design
+          </button>
+          <!--
+          <li>
+            Front-end</li>
+          -->
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <div class="courses-holder-ul">
+    <ul class="cards">
+      <li>
+        <a href="#" class="card">
+          <%= image_tag("logo/HTMLB.png" , class:"card_image") %>
+          <div class="card__overlay">
+            <div class="card__header">
+              <div class="card__header-text">
+                <h3 class="card__title t-s-header blue">
+                  HTML:5</h3>
+                <span class="card__lesson">
+                  24 lessons</span>
+                <span class="nav-arrow"><i class='bx bxs-right-arrow-circle'></i></span>
+              </div>
+            </div>
+            <p class="card__description">HTML is the standard markup language for Web pages. With HTML you
+              can create your own Website. HTML is easy to learn - You will
+              enjoy it!</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="card">
+          <%= image_tag("logo/cssb.png" , class:"card_image") %>
+          <div class="card__overlay">
+            <div class="card__header">
+              <div class="card__header-text">
+                <h3 class="card__title t-s-header blue ">
+                  CSS:3</h3>
+                <span class="card__lesson">
+                  12 lessons</span>
+                <span class="nav-arrow"><i class='bx bxs-right-arrow-circle'></i></span>
+              </div>
+            </div>
+            <p class="card__description">CSS is the language we use to style an HTML document. CSS
+              describes how HTML elements should be displayed.- You will enjoy
+              it!</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="card">
+          <%= image_tag("logo/jsb.png" , class:"card_image") %>
+          <div class="card__overlay">
+            <div class="card__header">
+              <div class="card__header-text">
+                <h3 class="card__title t-s-header blue ">
+                  JS
+                </h3>
+                <span class="card__lesson">
+                  60 lessons</span>
+                <span class="nav-arrow"><i class='bx bxs-right-arrow-circle'></i></span>
+              </div>
+            </div>
+            <p class="card__description">JavaScript is the world's most popular programming language.
+              JavaScript is the programming language of the Web.- You will
+              enjoy it!</p>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="card">
+          <%= image_tag("els.png" , class:"card_image") %>
+          <div class="card__overlay">
+            <div class="card__header">
+              <div class="card__header-text">
+                <h3 class="card__title t-s-header blue ">
+                  ELS
+                </h3>
+                <span class="card__lesson">
+                  60 lessons</span>
+                <span class="nav-arrow"><i class='bx bxs-right-arrow-circle'></i></span>
+              </div>
+            </div>
+            <p class="card__description">
+              Life Skills is an English test for people who need to prove their
+              English speaking and listening ability as part of a visa or
+              immigration application.
+            </p>
+          </div>
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</section>
+      <%= render "render/footer" %>
+
+
+<script>
+   
+var tog_mode = localStorage.getItem("dark_mode");
+console.log(tog_mode);
+
+var cour = document.getElementById("course-img");
+if (tog_mode == "true") {
+    cour.classList.add("img-d")
+    console.log("working")
+    
+} else {
+  cour.classList.remove("img-d")
+}
+</script>
+
+  <%# <%= render "topics/index"%> %>

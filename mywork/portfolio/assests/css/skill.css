@@ -1,0 +1,245 @@
+:root {
+    --c-primary: #5E3BCD;
+    --c-seond: #AE62E5;
+    --c-light: #F3E9F2;
+    --c-black: #000000;
+    --c-isblack: black;
+    --c-dark: #2C1E59;
+    --c-white: white;
+}
+
+.AB-container {
+    position: absolute;
+    height: 500px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+    margin-left: 100px;
+    width: 100vw;
+}
+
+.card {
+    display: flex;
+    height: 280px;
+    width: 200px;
+    background-color: var(--c-isblack) !important;
+    border-radius: 10px;
+    box-shadow: -1rem 0 1rem transparent;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -100px;
+}
+
+.card:hover {
+    transform: translateY(20px);
+    transition: 0.4s ease-out;
+    margin-right: 110px;
+}
+
+.card:hover~.card {
+    position: relative;
+    transition: 0.4s ease-out;
+}
+
+.title {
+    color: black;
+    font-weight: 700;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    padding: 10px 20px;
+    background-color: #ffa500;
+}
+
+.bar {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    height: 5px;
+    width: 150px;
+}
+
+.emptybar {
+    background-color: var(--c-light);
+    width: 99%;
+    height: 100%;
+}
+
+.filledbar {
+    position: absolute;
+    top: 0px;
+    z-index: 3;
+    width: 0px;
+    height: 100%;
+    background: linear-gradient(90deg, #ffa500 20%, #ffa500 100%);
+    transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+    width: 99%;
+    transition: 0.4s ease-out;
+}
+
+.card:hover .circle {
+    background-color: var(--c-light);
+    transition: ease-in-out 0.2s;
+    border: 2px solid var(--c-dark);
+    opacity: 1;
+}
+
+.circle {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--c-isblack);
+    border-top-left-radius: 160px;
+    border-bottom-left-radius: 160px;
+    border: 1px solid white;
+    top: -5px;
+    left: 73%;
+    width: 60px;
+    height: 60px;
+    padding: 4px;
+    transition: ease-out 0.2s;
+    opacity: 0;
+}
+
+.circle img {
+    height: 50px;
+    width: 50px;
+}
+
+.text-holder {
+    height: 280px;
+    margin-left: 20px;
+    position: relative;
+    width: 400px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 1.5rem;
+}
+
+.text-holder h1 {
+    /* font-family: 'Permanent Marker', cursive; */
+}
+
+.info {
+    color: var(--c-light);
+    padding-top: 5px;
+    font-size: 1.3rem;
+
+}
+
+
+.info,
+.title,
+.text-holder {
+    pointer-events: none;
+}
+
+
+/* dong */
+
+
+/* .dong {
+    background-color: white;
+    border: 2px solid var(--dark);
+    border-radius: 60px;
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    z-index: 3000;
+    font-size: 3em;
+    top: 80%;
+    left: 89.5%;
+    padding: 0;
+} */
+
+
+/* dong-ends */
+
+
+/* custom scrollbar */
+
+
+
+/* gallery
+
+*/
+.gallery {
+    background-color: #ADD8E6;
+    ;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+}
+
+.box-skill-mine {
+    width: 45vw;
+    height: 45vw;
+    /* height: 70vh; */
+    display: grid;
+    grid-template-areas: '1fr 1fr 1fr'
+        '1fr 1fr 1fr'
+        '1fr 1fr 1fr';
+    /* grid-gap: 5px;    */
+    place-items: center;
+    place-content:  center;
+    column-gap: 2px;
+    row-gap: 2px;
+}
+
+
+.header-text.skill {
+    text-align: center;
+
+
+}
+
+.card-holder{
+    width: 10rem;
+    height: 10rem;
+    position: relative;
+}
+.card-flip{
+    position: absolute;
+    transform-style: preserve-3d;
+    transition:all 0.5s ease;
+    height: 100%;
+    width: 100%;
+}
+.card-holder:hover .card-flip{
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+
+}
+.card-front{
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    backface-visibility: hidden;
+}
+.card-front img{
+    width: 10rem;
+    height: 10rem;
+
+}
+.card-back{
+    position: absolute;
+    width: 10rem;
+    height: 10rem;
+    /* background-color: #ADD8E6; */
+    background-color: #ffa500;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}

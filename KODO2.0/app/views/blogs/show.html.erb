@@ -1,0 +1,23 @@
+
+
+<p>
+  <strong>Title:</strong>
+  <%= @blog.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @blog.content %>
+</p>
+
+<% if current_user.id = @blog.user_id %>
+  
+
+<%= image_tag @blog.blogImage ,width:"300px" if @blog.blogImage.attached?%>
+<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%= link_to 'Back', blogs_path %>
+
+<% else %>
+
+<%= link_to 'Back', blogs_path %>
+<% end %>

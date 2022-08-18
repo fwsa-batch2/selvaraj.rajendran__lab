@@ -1,0 +1,240 @@
+.course-holder {
+    background-color: var(--bg-color);
+    height: 100%;
+    width: 100%;
+    color: var(--text);
+    z-index: 0;
+    position: relative;
+
+    
+}
+
+.course-body {
+    background-color: var(--bg-color);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+h1.header {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    color: var(--text);
+    font-size: 3rem;
+    line-height: 3rem;
+
+}
+
+.courses-container {
+    display: block;
+    background: var(--bg-color);
+    box-shadow: 0px 8px 15px 1px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    z-index: 20;
+    width: 80%;
+    position: relative;
+
+}
+
+
+.content-holder {
+    display: flex;
+    z-index: 20;
+    position: relative;
+    width: 100%;
+
+}
+
+.content-body {
+    padding: 20px;
+    width: 60%;
+}
+
+.content-image {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 40%;
+    background-color: white;
+}
+
+
+.image {
+    height: 12.5rem;
+
+    /* border: 1px solid var(--primary); */
+}
+
+.courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.courses-head {
+    text-align: center;
+    margin: 10%;
+    color: var(--text);
+    position: relative;
+    z-index: 10;
+    font-size: 3rem;
+    line-height: 3rem;
+    /* text-transform: capitalize; */
+}
+
+.courses-list-card {
+    max-width: 37rem;
+    min-width: 25rem;
+    min-height: 20rem;
+    max-height: 23rem;
+    height: 100%;
+    border: 2px solid black;
+    display: block;
+    padding: 10px;
+    margin: 1%;
+    background:var(--bg-card);
+    box-shadow: 0px 8px 15px 1px rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    z-index: 20;
+    transition: all ease-in-out 0.2s;
+}
+
+.background {
+    background-color: var(--card);
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    position: absolute;
+    z-index: -20;
+    top: 0;
+    left: 0;
+    clip-path: ellipse(100px 100px at 20% 0%);
+
+    transition: all ease-in-out 0.5s;
+}
+
+.background.t {
+    position: absolute;
+    background-color: var(--bg-sec);
+    border: 2 px solid red;
+    clip-path: ellipse(100px 100px at 100% 100%);
+}
+
+.courses-list-card:hover .background {
+    clip-path: ellipse(500px 500px at 20% 0%);
+    transition: all ease-in-out 0.2s;
+
+}
+
+.courses-list-card:hover .background.t {
+    clip-path: ellipse(500px 500px at 0% 0%);
+    transition: all ease-in-out 0.2s;
+
+}
+.courses-list-card:hover{
+transform: translateY(-10px);
+transition: all ease-in-out 0.2s;
+}
+
+.card-list-title {
+    display: flex;
+}
+
+.list-title {
+    /* padding: 5px; */
+    font-size: 2.3rem;
+    line-height: 3rem;
+    position: relative;
+    width: 60%;
+    color: var(--text);
+    word-wrap: break-word;
+}
+
+.chapter_number {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    position: relative;
+    color: var(--text);
+    /* background-color: var(--primary); */
+    border-radius: 50%;
+}
+
+.chapter_number p {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin: 0%;
+}
+
+.chapter_number i {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.course-img {
+    height: 200px;
+}
+
+.list-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 18rem;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+}
+
+.check {
+    height: 50rem;
+    width: 50rem;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    z-index: 1;
+    border-radius: 50%;
+    background: #40089b62;
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@media(max-width: 900px) {
+    .content-holder {
+        display: block;
+
+    }
+
+    .content-image {
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 10px;
+    }
+}

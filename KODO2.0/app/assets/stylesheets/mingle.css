@@ -1,0 +1,93 @@
+.items-holder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+
+.switch-holder {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+}
+
+.blog-chat-holder {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-chat-holder .blog {
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: 0.5s all ease-in-out;
+    opacity: 1;
+    min-height: 100vh;
+}
+
+.blog-chat-holder .blog-swap {
+    display: none;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 0.5s all ease-in-out;
+    position: absolute;
+}
+
+.blog-chat-holder .chat {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 0.5s all ease-in-out;
+    position: absolute;
+    display: none;
+}
+
+.blog-chat-holder .chat-swap {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    opacity: 1;
+    z-index: 20;
+    transition: 0.5s all ease-in-out;
+}
+
+.title-bc {
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 300;
+    min-width: 15rem;
+    padding: 5px 10px;
+    text-align: center;
+    background: var(--bg);
+    /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+    backdrop-filter: blur(7.5px);
+    -webkit-backdrop-filter: blur(7.5px);
+    /* border: 1px solid var(--p-text); */
+}
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

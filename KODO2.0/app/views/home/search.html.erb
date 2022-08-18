@@ -1,0 +1,17 @@
+
+
+ <% if @filtered_items.length == 0  %>
+
+ <h1>no result found</h1>
+ <% else %>
+    
+<div>
+<% @filtered_items.each do |f| %>
+
+<p> <%= f['Username'] %></p>
+ <p> <%= f.Username %></p> 
+<% end %>
+</div>
+
+
+<% end %>

@@ -1,0 +1,43 @@
+
+
+
+<div class="blog-holder">
+  <div class="menu-blog"> 
+  <%= link_to 'New Blog' , new_blog_path,class:"btn btn-primary" %> <br>
+  <%= link_to 'blogs' , blogs_path,class:"btn btn-primary" %> <br>
+
+  <%= link_to 'saved blogs' , savedblogs_path,class:"btn btn-primary" %> <br>
+
+  </div>
+  <div class="show-blog">
+  
+
+    <div class="item">
+
+<% check_user =  SavedBlog.where(user_id: current_user.id) %>
+
+<% check_user.each do |get_user| %>
+   
+  <% @check_blog = get_user.blog_id %>
+  <% get_blog =  Blog.where(id: @check_blog) %>
+
+  <%  get_blog.each do |current_blog| %>
+  <%= get_user.id  %>
+
+   <%= current_blog.title %>
+ <%= link_to "deleteSavedBlog/#{get_user.id}",  method: :delete, data: { confirm: 'Are you sure?' } do %>  deletee  <% end %>
+
+
+  <% end %>
+
+
+<% end %>
+
+      
+    <div class="item"></div> 
+  </div>
+</div>
+      <%# <!-- <%= image_tag blog.blogImage ,width:"300px" if blog.blogImage.attached?%> --> %>
+                    <%# <%= link_to 'Destroy' , blog, method: :delete, data: { confirm: 'Are you sure?' } %> %>
+                <%# <%= image_tag blog_item.blogImage ,width:"300px" if blog.blogImage.attached? %> %>
+      <!-- Modal -->

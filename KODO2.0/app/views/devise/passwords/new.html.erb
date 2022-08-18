@@ -1,0 +1,33 @@
+<%= render "devise/shared/error_messages" , resource: resource %>
+    <div class="container">
+      <div class="box-pass">
+
+
+        <div class="form-pass">
+          <h2 class="h1">Forgot your password?</h2>
+          <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
+            %>
+
+            <div class="icon-h">
+            <i class='bx bxs-lock-open-alt' ></i></div>
+            <div class="input-holder">
+            <i class='bx bxs-envelope' ></i>
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class: "no-border" ,placeholder: "Email Address"
+                %>
+            </div>
+            <div class="small-h">
+             Enter your email address <br> and we'll send you an br
+             email with instructions to <br> reset your password.</div>
+             <br>
+            <div class="btn-login">
+              <%= f.submit "Send " ,class: "btn btn-primary" %>
+            </div>
+            <br>
+            <hr>
+            <div class="cen">
+     <%= render "devise/shared/links" %>
+            </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
