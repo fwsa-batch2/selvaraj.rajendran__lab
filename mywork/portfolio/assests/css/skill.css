@@ -124,9 +124,7 @@
     font-size: 1.5rem;
 }
 
-.text-holder h1 {
-    /* font-family: 'Permanent Marker', cursive; */
-}
+
 
 .info {
     color: var(--c-light);
@@ -179,11 +177,12 @@
     height: 100%;
     width: 100vw;
     display: flex;
+    border: 2px solid red;
 }
 
 .box-skill-mine {
-    width: 45vw;
-    height: 45vw;
+    width: 43vw;
+    height: 43vw;
     /* height: 70vh; */
     display: grid;
     grid-template-areas: '1fr 1fr 1fr'
@@ -204,8 +203,8 @@
 }
 
 .card-holder{
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
     position: relative;
 }
 .card-flip{
@@ -222,19 +221,19 @@
 }
 .card-front{
     position: absolute;
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
     backface-visibility: hidden;
 }
 .card-front img{
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
 
 }
 .card-back{
     position: absolute;
-    width: 10rem;
-    height: 10rem;
+    width: 9rem;
+    height: 9rem;
     /* background-color: #ADD8E6; */
     background-color: #ffa500;
     backface-visibility: hidden;
